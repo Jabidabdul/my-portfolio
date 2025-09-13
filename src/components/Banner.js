@@ -27,11 +27,9 @@ export const Banner = () => {
   const mainControls = useAnimation();
 
   const toRotate = [
-    "Full-Stack Developer",
-    "MERN Stack Expert",
+    "Full Stack/MERN Expert",
     "DevOps Engineer",
-    "Cloud Solutions Architect",
-    "React Specialist",
+    "Agentic AI Developer",
     "Node.js Developer",
   ];
   const period = 2000;
