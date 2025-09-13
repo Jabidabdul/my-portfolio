@@ -33,6 +33,7 @@ import numasync_website from "../assets/numasync_website.png";
 import clarks_website from "../assets/clarks_website.png";
 import tokenmetrics_website from "../assets/tokenmetrics_website.png";
 import skugal_erp_website from "../assets/skugal_erp_website.png";
+import shoorah_website from "../assets/shoorah_website.png";
 
 export const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -85,9 +86,8 @@ export const Projects = () => {
         "Full-stack mental health application using React.js frontend, Node.js backend, and MongoDB database with comprehensive wellness features.",
       longDescription:
         "Developed full-stack mental health application using React.js frontend, Node.js backend, and MongoDB database. Built comprehensive wellness features including self-assessment tools, instant support chat, and multi-user authentication with JWT.",
-      image:
-        "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=600&h=400&fit=crop",
-      liveUrl: "https://shoorah.com",
+      image: shoorah_website,
+      liveUrl: "https://shoorah.io/",
       githubUrl: "https://github.com/Jabidabdul/shoorah",
       category: "fullstack",
       role: "Contract Developer",
