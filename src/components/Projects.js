@@ -55,7 +55,7 @@ export const Projects = () => {
       longDescription:
         "Architected complete system using ReactTS/NextTS frontend, NodeJS backend, PostgreSQL database, and AWS infrastructure (EC2, S3, Lambda, RDS). Integrated self-hosted n8n using Docker for AI workflow automation and created embeddable widgets for third-party integration.",
       image: getcompound_website,
-      liveUrl: "https://compound.com",
+      liveUrl: "https://www.getcompound.co",
       githubUrl: "https://github.com/Jabidabdul/compound",
       category: "fullstack",
       role: "Lead Software Engineer",
