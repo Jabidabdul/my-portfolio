@@ -52,7 +52,7 @@ export const Projects = () => {
         "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
       liveUrl: "https://compound.com",
       githubUrl: "https://github.com/Jabidabdul/compound",
-      category: ["fullstack", "backend", "frontend"],
+      category: "fullstack",
       role: "Lead Software Engineer",
       technologies: [
         "ReactTS",
@@ -84,7 +84,7 @@ export const Projects = () => {
         "https://images.unsplash.com/photo-1621761191319-c6fb62004040?w=600&h=400&fit=crop",
       liveUrl: "https://shoorah.com",
       githubUrl: "https://github.com/Jabidabdul/shoorah",
-      category: ["fullstack", "backend", "frontend"],
+      category: "fullstack",
       role: "Contract Developer",
       technologies: [
         "React.js",
@@ -114,7 +114,7 @@ export const Projects = () => {
         "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
       liveUrl: "https://debitmydata.com",
       githubUrl: "https://github.com/Jabidabdul/debitmydata",
-      category: ["fullstack", "backend", "frontend"],
+      category: "fullstack",
       role: "Full-Stack Developer",
       technologies: [
         "NextJS",
@@ -144,7 +144,7 @@ export const Projects = () => {
         "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
       liveUrl: "https://revitpay.com",
       githubUrl: "https://github.com/Jabidabdul/revitpay",
-      category: ["backend"],
+      category: "backend",
       role: "Full-Stack Developer",
       technologies: [
         "React.js",
@@ -174,7 +174,7 @@ export const Projects = () => {
         "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
       liveUrl: "https://clarks.com",
       githubUrl: "https://github.com/Jabidabdul/clarks",
-      category: ["backend"],
+      category: "backend",
       role: "Backend Developer",
       technologies: [
         "AWS Lambda",
@@ -203,7 +203,7 @@ export const Projects = () => {
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       liveUrl: "https://tokenmetrics.com",
       githubUrl: "https://github.com/Jabidabdul/tokenmetrics",
-      category: ["fullstack", "backend", "frontend"],
+      category: "fullstack",
       role: "Full-Stack Developer",
       technologies: [
         "React.js",
@@ -233,7 +233,7 @@ export const Projects = () => {
         "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
       liveUrl: "https://erp.skugal.com",
       githubUrl: "https://github.com/Jabidabdul/skugal-erp",
-      category: ["fullstack", "backend", "frontend"],
+      category: "fullstack",
       role: "Full-Stack Developer",
       technologies: [
         "Firebase",
@@ -263,8 +263,7 @@ export const Projects = () => {
   ];
 
   const filteredProjects = projects.filter(
-    (project) =>
-      activeFilter === "all" || project.category.includes(activeFilter)
+    (project) => activeFilter === "all" || project.category === activeFilter
   );
 
   const containerVariants = {
