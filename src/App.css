@@ -358,6 +358,19 @@ body {
   transform: translateY(-2px);
 }
 
+/* Remove focus outline from logo */
+.navbar-brand:focus,
+.navbar-brand:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+.navbar-brand img:focus,
+.navbar-brand img:focus-visible {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
 h1,
 h2,
 h3,
