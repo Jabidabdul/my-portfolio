@@ -45,7 +45,7 @@ import "aos/dist/aos.css";
 import colorSharp from "../assets/img/color-sharp.png";
 
 export const Skills = () => {
-  const [activeCategory, setActiveCategory] = useState("ai");
+  const [activeCategory, setActiveCategory] = useState("frontend");
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
   const mainControls = useAnimation();
