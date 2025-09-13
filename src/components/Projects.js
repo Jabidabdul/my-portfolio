@@ -27,6 +27,12 @@ import "aos/dist/aos.css";
 import "animate.css";
 import TrackVisibility from "react-on-screen";
 import colorSharp2 from "../assets/img/color-sharp2.png";
+import getcompound_website from "../assets/getcompound_website.png";
+import debitmydata_website from "../assets/debitmydata_website.png";
+import numasync_website from "../assets/numasync_website.png";
+import clarks_website from "../assets/clarks_website.png";
+import tokenmetrics_website from "../assets/tokenmetrics_website.png";
+import skugal_erp_website from "../assets/skugal_erp_website.png";
 
 export const Projects = () => {
   const [activeFilter, setActiveFilter] = useState("all");
@@ -48,8 +54,7 @@ export const Projects = () => {
         "Complete system using ReactTS/NextTS frontend, NodeJS backend, PostgreSQL database, and AWS infrastructure with AI workflow automation.",
       longDescription:
         "Architected complete system using ReactTS/NextTS frontend, NodeJS backend, PostgreSQL database, and AWS infrastructure (EC2, S3, Lambda, RDS). Integrated self-hosted n8n using Docker for AI workflow automation and created embeddable widgets for third-party integration.",
-      image:
-        "https://images.unsplash.com/photo-1558494949-ef010cbdcc31?w=600&h=400&fit=crop",
+      image: getcompound_website,
       liveUrl: "https://compound.com",
       githubUrl: "https://github.com/Jabidabdul/compound",
       category: "fullstack",
@@ -110,8 +115,7 @@ export const Projects = () => {
         "AI-powered NFT marketplace using NextJS frontend, NodeJS backend, Python3 for AI processing, and AWS services.",
       longDescription:
         "Created AI-powered NFT marketplace using NextJS frontend, NodeJS backend, Python3 for AI processing, and AWS services (Lambda, S3, DynamoDB). Built automated NFT creation and sales functionality with AI agents executing tasks based on user instructions.",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?w=600&h=400&fit=crop",
+      image: debitmydata_website,
       liveUrl: "https://debitmydata.com",
       githubUrl: "https://github.com/Jabidabdul/debitmydata",
       category: "fullstack",
@@ -135,25 +139,17 @@ export const Projects = () => {
     },
     {
       id: 4,
-      title: "Revitpay",
+      title: "Revitpay (Numasync)",
       description:
-        "Scalable data processing platform using React.js frontend, Node.js backend, AWS Textract for OCR, Lambda for processing, S3 for storage, and DynamoDB for metadata.",
+        "Scalable data processing platform using Node.js backend, AWS Textract for OCR, Lambda for processing, S3 for storage, and DynamoDB for metadata.",
       longDescription:
-        "Built scalable data processing platform using React.js frontend, Node.js backend, AWS Textract for OCR, Lambda for processing, S3 for storage, and DynamoDB for metadata. Processed 100,000+ documents including PDFs and images with 95% accuracy using AWS Textract integration.",
-      image:
-        "https://images.unsplash.com/photo-1611224923853-80b023f02d71?w=600&h=400&fit=crop",
-      liveUrl: "https://revitpay.com",
-      githubUrl: "https://github.com/Jabidabdul/revitpay",
+        "Built scalable data processing platform using Node.js backend, AWS Textract for OCR, Lambda for processing, S3 for storage, and DynamoDB for metadata. Processed 100,000+ documents including PDFs and images with 95% accuracy using AWS Textract integration.",
+      image: numasync_website,
+      liveUrl: "https://numasync.app/",
+      githubUrl: "https://github.com/Jabidabdul/numasync",
       category: "backend",
       role: "Full-Stack Developer",
-      technologies: [
-        "React.js",
-        "Node.js",
-        "AWS Textract",
-        "Lambda",
-        "S3",
-        "DynamoDB",
-      ],
+      technologies: ["Node.js", "AWS Textract", "Lambda", "S3", "DynamoDB"],
       features: [
         "Document Processing",
         "OCR Integration",
@@ -170,8 +166,7 @@ export const Projects = () => {
         "Backend automation using AWS Lambda and Step Functions to convert retail product information into JSON format.",
       longDescription:
         "Developed backend automation using AWS Lambda and Step Functions to convert retail product information into JSON format. Built automated data processing pipeline handling 50,000+ product records with 99.5% accuracy.",
-      image:
-        "https://images.unsplash.com/photo-1677442136019-21780ecad995?w=600&h=400&fit=crop",
+      image: clarks_website,
       liveUrl: "https://clarks.com",
       githubUrl: "https://github.com/Jabidabdul/clarks",
       category: "backend",
@@ -199,9 +194,8 @@ export const Projects = () => {
         "Backend automation services using Node.js and Express.js for live cryptocurrency pricing and watchlist functionality.",
       longDescription:
         "Developed backend automation services using Node.js and Express.js for live cryptocurrency pricing and watchlist functionality. Built responsive React.js UI application with real-time data updates and integrated Mixpanel for user behavior analytics.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
-      liveUrl: "https://tokenmetrics.com",
+      image: tokenmetrics_website,
+      liveUrl: "https://app.tokenmetrics.com",
       githubUrl: "https://github.com/Jabidabdul/tokenmetrics",
       category: "fullstack",
       role: "Full-Stack Developer",
@@ -229,8 +223,7 @@ export const Projects = () => {
         "Comprehensive school data systems using Firebase ecosystem and AWS Lambda with scalable backend APIs.",
       longDescription:
         "Managed comprehensive school data systems using Firebase ecosystem (Firestore, Authentication, Cloud Functions) and AWS Lambda. Developed scalable backend APIs using Node.js and Express.js, serving 5,000+ students and staff members. Integrated CashFree payment solutions processing 2,000+ monthly transactions for school fees and services.",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?w=600&h=400&fit=crop",
+      image: skugal_erp_website,
       liveUrl: "https://erp.skugal.com",
       githubUrl: "https://github.com/Jabidabdul/skugal-erp",
       category: "fullstack",
