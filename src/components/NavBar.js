@@ -13,6 +13,7 @@ export const NavBar = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isDarkMode, setIsDarkMode] = useState(true);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMoreMenuOpen, setIsMoreMenuOpen] = useState(false);
 
   useEffect(() => {
     const onScroll = () => {
@@ -37,14 +38,29 @@ export const NavBar = () => {
     }
   }, [isDarkMode]);
 
+  // Close more menu when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isMoreMenuOpen && !event.target.closest(".more-menu-container")) {
+        setIsMoreMenuOpen(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isMoreMenuOpen]);
+
   const onUpdateActiveLink = (value) => {
     setActiveLink(value);
     setIsMobileMenuOpen(false);
+    setIsMoreMenuOpen(false);
   };
 
   const handleDownload = () => {
     const link = document.createElement("a");
-    link.href = "/Jabid_Abdul_Hamid_ATS_3.pdf"; // Path to your file in the public directory
+    link.href = "/Jabid_Abdul_Hamid_ATS_Refined.pdf"; // Path to your file in the public directory
     link.download = "Jabid_Abdul_Hamid_4YOE.pdf"; // Specify the default file name
     document.body.appendChild(link);
     link.click();
@@ -57,6 +73,10 @@ export const NavBar = () => {
 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
+  };
+
+  const toggleMoreMenu = () => {
+    setIsMoreMenuOpen(!isMoreMenuOpen);
   };
 
   return (
@@ -101,9 +121,9 @@ export const NavBar = () => {
                 transition={{ duration: 0.3 }}
               >
                 {isMobileMenuOpen ? (
-                  <FaTimes size={20} />
+                  <FaTimes size={20} color="#b8b8b8" />
                 ) : (
-                  <FaBars size={20} />
+                  <FaBars size={20} color="#b8b8b8" />
                 )}
               </motion.span>
             </Navbar.Toggle>
@@ -166,6 +186,69 @@ export const NavBar = () => {
               <Nav.Link className={"navbar-link"} onClick={handleDownload}>
                 Resume
               </Nav.Link>
+
+              {/* More menu for tablet view */}
+              <div className="more-menu-container">
+                <button
+                  className="more-menu-trigger"
+                  onClick={toggleMoreMenu}
+                  aria-label="More menu"
+                >
+                  ⋯
+                </button>
+                {isMoreMenuOpen && (
+                  <div className="more-menu-dropdown">
+                    <Nav.Link
+                      href="#experience"
+                      className={
+                        activeLink === "experience"
+                          ? "active navbar-link"
+                          : "navbar-link"
+                      }
+                      onClick={() => onUpdateActiveLink("experience")}
+                    >
+                      Experience
+                    </Nav.Link>
+                    <Nav.Link
+                      href="#projects"
+                      className={
+                        activeLink === "projects"
+                          ? "active navbar-link"
+                          : "navbar-link"
+                      }
+                      onClick={() => onUpdateActiveLink("projects")}
+                    >
+                      Projects
+                    </Nav.Link>
+                    <Nav.Link
+                      className={"navbar-link"}
+                      onClick={handleDownload}
+                    >
+                      Resume
+                    </Nav.Link>
+
+                    {/* Social icons in dropdown */}
+                    <div className="dropdown-social-icons">
+                      <a
+                        href="https://www.linkedin.com/in/jabid-abdul-hamid-955028194/"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="dropdown-social-link"
+                      >
+                        <img src={navIcon1} alt="LinkedIn" />
+                      </a>
+                      <a
+                        href="https://github.com/Jabidabdul"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="dropdown-social-link"
+                      >
+                        <img src={navIcon4} alt="Github" />
+                      </a>
+                    </div>
+                  </div>
+                )}
+              </div>
             </Nav>
             <span className="navbar-text">
               <div className="social-icon">
